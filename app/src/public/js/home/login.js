@@ -25,6 +25,15 @@ function login(){
         body: JSON.stringify(req),
     })
     .then((res)=> res.json())
-    .then(console.log);
+    .then((res) => {
+        if(res.success){
+            location.href ="/";
+        }else{
+            alert(res.msg);
+        }
+    })
+    .catch((err)=>{
+        console.error(new Error("존재하지 않는 아이디,비번"));
+    });
 
 }

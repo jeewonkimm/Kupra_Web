@@ -1,7 +1,5 @@
 "use restrict";
 
-
-
 const output = {
     home: (req,res) =>{
         res.render("home/index");
@@ -32,8 +30,8 @@ const process = {
 
         return res.json({
             success: false,
-            msg: "LOGIN FAIL",
-        })
+            msg: "아이디 비번 매치 안됨",
+        });
     },
 };
 
